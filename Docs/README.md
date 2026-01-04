@@ -26,4 +26,4 @@ This project aims to demonstrate how computer vision + machine learning can assi
 - Source: The dataset is from the Dryad Digital Repository
  https://datadryad.org/dataset/doi:10.5061/dryad.5dv41nsfj
 
-- Content: The dataset is modified by code that splits up the disk diffusion images into rectangular sections, isolating each antibiotic
+- Content: The dataset is modified by code that splits up the disk diffusion images into rectangular sections, isolating each antibiotic.

@@ -1,9 +1,9 @@
-# # streamlit run .\Antibiotic-Resistance-Model\website\app.py
+# streamlit run .\Antibiotic-Resistance-Model\website\app.py
 import streamlit as st
 import streamlit.components.v1 as components
 
 import pandas as pd
-filepath = 'Antibiotic-Resistance-Model\website\output.csv'
+filepath = 'output.csv'
 antibiotic_df = pd.read_csv(filepath)
 
 st.title("Virtual Lab")

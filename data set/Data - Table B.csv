@@ -1,0 +1,9 @@
+Antibiotic Name,has cell wall,has multidrug efflux pump,hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection
+Penicillins,0.1,0.8,0.9,0.6,0.4,0.9,0.1,0.9
+Vancomycins,0.5,0.2,0,1,1,0.5,0.1,0.9
+Carbapenems,0.1,0.9,1,0.6,0.8,0.5,0.1,0.7
+Cephalosporins,0.1,0.7,0.9,0.6,0.6,0.9,0.1,0.8
+Aminoglycosides,0.3,0.6,0.9,0.3,0.3,0.1,1,0.9
+Macrolides,0.4,0.8,0.8,0.4,0.3,0.1,0.9,0.8
+Fluoroquinolones,0.2,0.5,0.3,0.4,0.4,0.1,0.2,0.8
+Tetracyclines,0.3,0.9,0.9,0.4,0.4,0.1,0.8,0.9

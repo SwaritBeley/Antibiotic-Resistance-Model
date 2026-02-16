@@ -3,7 +3,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 import pandas as pd
-filepath = 'output.csv'
+filepath = './website/output.csv'
 antibiotic_df = pd.read_csv(filepath)
 
 st.title("Virtual Lab")

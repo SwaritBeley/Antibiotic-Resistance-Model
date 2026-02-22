@@ -1,16 +1,11 @@
 import pandas as pd
-filepath_A = 'Antibiotic-Resistance-Model\data set\Data - Table A.csv'
+filepath_A = '.\data set\Data - Table A.csv'
 bacteria_df = pd.read_csv(filepath_A)
 bacteria_df = bacteria_df.replace({'Yes': 1, 'No': 0})
-filepath_B = 'Antibiotic-Resistance-Model\data set\Data - Table B.csv'
+filepath_B = '.\data set\Data - Table B.csv'
 antibiotic_df = pd.read_csv(filepath_B)
-#print(bacteria_df)
-#print(antibiotic_df)
 
 supertable = bacteria_df.merge(antibiotic_df, how='cross')
-
-# # Drop all _y columns
-# supertable = supertable.loc[:, ~supertable.columns.str.endswith('_y')]
 
 supertable['cell_wall_factor'] = 0
 supertable['efflux_pump_factor'] = 0
@@ -21,13 +16,8 @@ supertable['pbp_modification_factor'] = 0
 supertable['ribosomal_methylation_factor'] = 0
 supertable['biofilm_factor'] = 0
 
-
-# # Rename all _x columns by removing the suffix
-# supertable.columns = supertable.columns.str.replace('_x$', '', regex=True)
 supertable['Total Vulnerability'] = 0
 supertable['Resistance'] = 0
-
-
 
 for index, row in supertable.iterrows():
     has_cell_wall = row['has cell wall_x'] * row['has cell wall_y']
@@ -77,4 +67,4 @@ for index, row in supertable.iterrows():
 supertable['Total Vulnerability'] = supertable['Total Vulnerability'].round(1)
 supertable['Resistance'] = supertable['Resistance'].round(2)
 
-supertable.to_csv('Antibiotic-Resistance-Model\website\output.csv')
+supertable.to_csv('.\website\data\output.csv')

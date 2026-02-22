@@ -7,24 +7,30 @@ import pandas as pd
 filepath = './website/data/output.csv'
 antibiotic_df = pd.read_csv(filepath)
 
-row = antibiotic_df[
-    (antibiotic_df["Bacteria Name"] == bacteria) &
-    (antibiotic_df["Antibiotic Name"] == antibiotic)
-]
+def process_input():
+  global row
+  global chart_data
+  
+  row = antibiotic_df[
+      (antibiotic_df["Bacteria Name"] == bacteria) &
+      (antibiotic_df["Antibiotic Name"] == antibiotic)
+  ]
 
-vulnerability_total = float(row['Total Vulnerability'])
+  vulnerability_total = float(row['Total Vulnerability'])
 
-# Go through each factor and create data entries for the chart                            
-factor_columns = [column for column in antibiotic_df.columns if column.endswith(" factor")]
-chart_data = [{ 
-              "value": float(row[factor]) / vulnerability_total,
-               "name": factor.replace(' factor', '')
-               } 
-               for factor in factor_columns]
+  # Go through each factor and create data entries for the chart                            
+  factor_columns = [column for column in antibiotic_df.columns if column.endswith(" factor")]
+  chart_data = [{ 
+                "value": float(row[factor]) / vulnerability_total,
+                "name": factor.replace(' factor', '')
+                } 
+                for factor in factor_columns]
 
-# Goes through each item in chart data and includes it if the item value is not equal to 0.
-# Did this so it wouldn't show up in the chart
-chart_data = [item for item in chart_data if item["value"] != 0]
+  # Goes through each item in chart data and includes it if the item value is not equal to 0.
+  # Did this so it wouldn't show up in the chart
+  chart_data = [item for item in chart_data if item["value"] != 0]
+
+
 
 st.set_page_config(page_title="Virtual Lab", page_icon="🦠")
 
@@ -39,6 +45,8 @@ bacteria = st.selectbox(
 antibiotic = st.selectbox("Choose an Antibiotic?", 
     set(antibiotic_df["Antibiotic Name"])
 )
+
+process_input()
 
 st.write(bacteria, "is ", float(row['Resistance']), " resistant to ", antibiotic, ".")
 

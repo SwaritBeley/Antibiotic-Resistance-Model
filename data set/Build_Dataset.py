@@ -1,70 +1,47 @@
 import pandas as pd
+
+# reads tables into dataframes
 filepath_A = '.\data set\Data - Table A.csv'
 bacteria_df = pd.read_csv(filepath_A)
-bacteria_df = bacteria_df.replace({'Yes': 1, 'No': 0})
+bacteria_df = bacteria_df.replace({'Yes': 1, 'No': 0}) # convert to 0/1 for multiplcation process after
 filepath_B = '.\data set\Data - Table B.csv'
 antibiotic_df = pd.read_csv(filepath_B)
 
+# Pairs bacteria rows with antibiotic rows
 supertable = bacteria_df.merge(antibiotic_df, how='cross')
 
-supertable['cell_wall_factor'] = 0
-supertable['efflux_pump_factor'] = 0
-supertable['hydrolysis_factor'] = 0
-supertable['porin_loss_factor'] = 0
-supertable['porin_mutation_factor'] = 0
-supertable['pbp_modification_factor'] = 0
-supertable['ribosomal_methylation_factor'] = 0
-supertable['biofilm_factor'] = 0
+# Stores all mechanisms listed in bacteria_df
+mechanisms = bacteria_df.columns[1:]
 
 supertable['Total Vulnerability'] = 0
 supertable['Resistance'] = 0
 
+mechanism_factors = {}
+
+# Iterating over each row in the supertable to add resistance values
 for index, row in supertable.iterrows():
-    has_cell_wall = row['has cell wall_x'] * row['has cell wall_y']
-    has_multidrug_efflux_pump = row['has multidrug efflux pump_x'] * row['has multidrug efflux pump_y']
-    hydrolysis = row['performs hydrolysis'] * row['hydrolysis']
-    porin_loss = row['porin loss_x'] * row['porin loss_y']
-    porin_mutation = row['porin mutation_x'] * row['porin mutation_y']
-    pbp_modification = row['PBP modification_x'] * row['PBP modification_y']
-    ribosomal_methylation = row['ribosomal methylation_x'] * row['ribosomal methylation_y']
-    biofilm_protection = row['biofilm protection_x'] * row['biofilm protection_y']
-
-    supertable.at[index, 'cell wall factor'] = has_cell_wall
-    supertable.at[index, 'multidrug efflux pump factor'] = has_multidrug_efflux_pump
-    supertable.at[index, 'hydrolysis factor'] = hydrolysis
-    supertable.at[index, 'porin loss factor'] = porin_loss
-    supertable.at[index, 'porin mutation factor'] = porin_mutation
-    supertable.at[index, 'PBP modification factor'] = pbp_modification
-    supertable.at[index, 'ribosomal methylation factor'] = ribosomal_methylation
-    supertable.at[index, 'biofilm protection factor'] = biofilm_protection
-
-    total_vulnerability = (
-        has_cell_wall
-        + has_multidrug_efflux_pump
-        + hydrolysis
-        + porin_loss
-        + porin_mutation
-        + pbp_modification
-        + ribosomal_methylation
-        + biofilm_protection
-    )
-        
-    total_sum = (
-        row['has cell wall_y']
-        + row['has multidrug efflux pump_y']
-        + row['hydrolysis']
-        + row['porin loss_y']
-        + row['porin mutation_y']
-        + row['PBP modification_y']
-        + row['ribosomal methylation_y']
-        + row['biofilm protection_y']
-    )
-
-
-    supertable.at[index, 'Total Vulnerability'] = total_vulnerability
-    supertable.at[index, 'Resistance'] = total_vulnerability / total_sum
     
-supertable['Total Vulnerability'] = supertable['Total Vulnerability'].round(1)
-supertable['Resistance'] = supertable['Resistance'].round(2)
+    total_sum = 0
+    
+    for mechanism in mechanisms:
+        # calculating individual mechanism factors
+        mechanism_factors[mechanism] = row[mechanism + '_x'] * row[mechanism + '_y']
+        supertable.at[index, mechanism + " factor"] = mechanism_factors[mechanism]
 
+        # Used for calculating total resistance
+        total_sum += row[mechanism + '_y']
+
+    total_vulnerability = sum(mechanism_factors.values())
+
+    supertable.at[index, 'Total Vulnerability'] = round(total_vulnerability, 1)
+    supertable.at[index, 'Resistance'] = round(total_vulnerability / total_sum, 2)
+
+    # Rounding the values
+    supertable['Total Vulnerability'] = supertable['Total Vulnerability'].round(1)
+    supertable['Resistance'] = supertable['Resistance'].round(2)
+
+    # Reset values for next iteration
+    mechanism_factors.clear()
+    
+# Stores it to output.csv for the website to access
 supertable.to_csv('.\website\data\output.csv')

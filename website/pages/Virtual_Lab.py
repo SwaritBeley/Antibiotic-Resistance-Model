@@ -7,10 +7,12 @@ import pandas as pd
 filepath = './website/data/output.csv'
 antibiotic_df = pd.read_csv(filepath)
 
+# Setting up data for the piechart
 def process_input():
   global row
   global chart_data
   
+  # Pulls from bacteria and antibiotic name for dropdown
   row = antibiotic_df[
       (antibiotic_df["Bacteria Name"] == bacteria) &
       (antibiotic_df["Antibiotic Name"] == antibiotic)

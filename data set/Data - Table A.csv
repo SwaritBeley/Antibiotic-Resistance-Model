@@ -1,11 +1,13 @@
-Bacteria Name,has cell wall,has multidrug efflux pump,performs hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection
-Mycoplasma,No,No,No,No,No,No,No,Yes
-Escherichia coli,Yes,Yes,Yes,Yes,Yes,No,No,Yes
-Pseudomonas aeruginosa,Yes,Yes,Yes,Yes,Yes,No,No,Yes
-Klebsiella pneumoniae,Yes,Yes,Yes,Yes,Yes,No,No,Yes
-Salmonella enterica,Yes,Yes,Yes,Yes,Yes,No,No,Yes
-Acinetobacter baumannii,Yes,Yes,Yes,Yes,Yes,No,No,Yes
-Neisseria gonorrhoeae,Yes,Yes,Yes,No,Yes,No,No,Yes
-Enterococcus faecium,Yes,No,No,No,No,Yes,Yes,Yes
-Enterobacter cloacae,Yes,Yes,Yes,Yes,Yes,No,No,Yes
-Serratia marcescens,Yes,Yes,Yes,No,No,No,No,Yes
+Bacteria Name,has cell wall_factor,has multidrug efflux pump,performs hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection,target alteration,target replacement,target overexpression,inactivation
+Mycoplasma,No,No,No,No,No,No,No,Yes,No,No,No,No
+Escherichia coli,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
+Pseudomonas aeruginosa,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
+Klebsiella pneumoniae,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
+Streptococcus pneumoniae,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No
+Salmonella enterica,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
+Acinetobacter baumannii,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
+Neisseria gonorrhoeae,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes
+Enterococcus faecium,Yes,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No
+Enterobacter cloacae,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
+Serratia marcescens,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes
+Mycobacterium tuberculosis,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No ,Yes ,Yes

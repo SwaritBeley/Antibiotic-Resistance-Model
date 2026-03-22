@@ -33,6 +33,7 @@ for index, row in supertable.iterrows():
 
     total_vulnerability = sum(mechanism_factors.values())
 
+    # Stores it into a column
     supertable.at[index, 'Total Vulnerability'] = round(total_vulnerability, 1)
     supertable.at[index, 'Resistance'] = round(total_vulnerability / total_sum, 2)
 

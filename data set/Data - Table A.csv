@@ -1,4 +1,4 @@
-Bacteria Name,has cell wall_factor,has multidrug efflux pump,performs hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection,target alteration,target replacement,target overexpression,inactivation
+Bacteria Name,has cell wall,has multidrug efflux pump,performs hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection,target alteration,target replacement,target overexpression,inactivation
 Mycoplasma,No,No,No,No,No,No,No,Yes,No,No,No,No
 Escherichia coli,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
 Pseudomonas aeruginosa,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
@@ -10,4 +10,4 @@ Neisseria gonorrhoeae,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes
 Enterococcus faecium,Yes,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No
 Enterobacter cloacae,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes
 Serratia marcescens,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes
-Mycobacterium tuberculosis,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No ,Yes ,Yes
+Mycobacterium tuberculosis,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes

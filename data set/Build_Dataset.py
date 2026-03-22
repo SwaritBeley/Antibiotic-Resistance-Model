@@ -20,7 +20,6 @@ mechanism_factors = {}
 
 # Iterating over each row in the supertable to add resistance values
 for index, row in supertable.iterrows():
-    
     total_sum = 0
     
     for mechanism in mechanisms:

@@ -1,9 +1,23 @@
-Antibiotic Name,has cell wall,has multidrug efflux pump,performs hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection,target alteration,target replacement,target overexpression,inactivation
-Penicillins,0.1,0.8,0.9,0.6,0.4,0.9,0.1,0.9,1,1,0.7,0.9
-Vancomycins,0.5,0.2,0,1,1,0.5,0.1,0.9,1,1,0.8,1
-Carbapenems,0.1,0.9,1,0.6,0.8,0.5,0.1,0.7,0.8,0.8,0.6,0.9
-Cephalosporins,0.1,0.7,0.9,0.6,0.6,0.9,0.1,0.8,1,1,0.9,0.9
-Aminoglycosides,0.3,0.6,0.9,0.3,0.3,0.1,1,0.9,1,0.7,0.9,0.2
-Macrolides,0.4,0.8,0.8,0.4,0.3,0.1,0.9,0.8,1,0.9,0.8,0.6
-Fluoroquinolones,0.2,0.5,0.3,0.4,0.4,0.1,0.2,0.8,0.9,0.7,0.8,0.9
-Tetracyclines,0.3,0.9,0.9,0.4,0.4,0.1,0.8,0.9,0.9,0.8,1,0.8
+Antibiotic Name,has multidrug efflux pump,performs hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection,target alteration,target replacement,target overexpression,inactivation
+Ampicillin,0.4,0.9,0.5,0.5,0.9,0,0.9,1,1,0.5,0.9
+Azithromycin,0.8,0.4,0.1,0.1,0,0.9,0.6,1,0.7,0.4,0.5
+Imipenem,0.3,0.7,0.8,0.6,0.6,0,0.7,0.2,0.1,0.1,0.5
+Meropenem,0.4,0.8,0.8,0.6,0.5,0,0.7,0.2,0.1,0.1,0.5
+Meropenem varborbactam,0.3,0.2,0.7,0.5,0.5,0,0.6,0.2,0.1,0.1,0.2
+Cefepime,0.4,0.6,0.5,0.4,0.7,0,0.6,0.2,0.1,0.1,0.5
+Cefiderocol,0.2,0.3,0.1,0.1,0.4,0,0.5,0.2,0.1,0.1,0.5
+Cefixime,0.5,0.7,0.5,0.4,0.7,0,0.6,0.2,0.1,0.1,0.5
+Cefoperazone sulbactam,0.4,0.3,0.5,0.4,0.6,0,0.6,0.2,0.1,0.1,0.3
+Cefoxitin,0.4,0.5,0.5,0.4,0.7,0,0.6,0.2,0.1,0.1,0.4
+Cefpodoxime,0.5,0.7,0.5,0.4,0.7,0,0.6,0.2,0.1,0.1,0.5
+Ceftaroline,0.3,0.5,0.4,0.3,0.5,0,0.6,0.2,0.1,0.1,0.4
+Ceftazidime avibactam,0.3,0.2,0.5,0.4,0.5,0,0.6,0.2,0.1,0.1,0.2
+Ceftibuten,0.5,0.7,0.5,0.4,0.7,0,0.6,0.2,0.1,0.1,0.5
+Ceftolozane tazobactam,0.3,0.2,0.5,0.4,0.5,0,0.6,0.2,0.1,0.1,0.2
+Ceftriaxone,0.5,0.7,0.5,0.4,0.7,0,0.6,0.2,0.1,0.1,0.5
+Amikacin,0.5,0.1,0.3,0.2,0,0.8,0.7,0.7,0.1,0.1,0.7
+Gentamicin,0.6,0.1,0.3,0.2,0,0.9,0.7,0.7,0.1,0.1,0.8
+Erythromycin,0.8,0.1,0.2,0.2,0,0.9,0.7,0.8,0.1,0.2,0.6
+Amoxy/clav,0.5,0.2,0.4,0.3,0.7,0,0.6,0.2,0.1,0.1,0.2
+Ampicillin sulbactam,0.5,0.2,0.4,0.3,0.7,0,0.6,0.2,0.1,0.1,0.2
+Oxacillin,0.4,0.8,0.3,0.2,0.9,0,0.6,0.2,0.1,0.1,0.6

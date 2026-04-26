@@ -1,4 +1,4 @@
-# streamlit run .\Antibiotic-Resistance-Model\website\app.py
+# streamlit run .\website\Home.py
 import streamlit as st
 import streamlit.components.v1 as components
 

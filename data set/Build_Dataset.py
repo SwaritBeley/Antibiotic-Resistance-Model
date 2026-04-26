@@ -13,6 +13,7 @@ supertable = bacteria_df.merge(antibiotic_df, how='cross')
 # Stores all mechanisms listed in bacteria_df
 mechanisms = bacteria_df.columns[1:]
 
+# Creates columns and sets them to zero
 supertable['Total Vulnerability'] = 0
 supertable['Resistance'] = 0
 
@@ -34,7 +35,7 @@ for index, row in supertable.iterrows():
 
     # Stores it into a column
     supertable.at[index, 'Total Vulnerability'] = round(total_vulnerability, 1)
-    supertable.at[index, 'Resistance'] = round(total_vulnerability / total_sum, 2)
+    supertable.at[index, 'Resistance'] = round(total_vulnerability / len(mechanisms), 2)
 
     # Rounding the values
     supertable['Total Vulnerability'] = supertable['Total Vulnerability'].round(1)

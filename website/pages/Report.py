@@ -1,3 +1,6 @@
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 import streamlit as st
 import pandas as pd
 
@@ -170,7 +173,7 @@ General resistance patterns emerged based on mechanism overlap. Certain mechanis
 """)
 
 # --- Image placed OUTSIDE the markdown string ---
-interface = './website/data/Images/interface.png'
+interface = BASE_DIR / "data" / "Images" / "interface.png"
 
 st.image(interface, caption="Figure 1: Virtual Lab Interface", use_container_width=True)
 

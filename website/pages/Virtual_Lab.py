@@ -4,26 +4,41 @@ import streamlit.components.v1 as components
 
 import pandas as pd
 
-filepath = './website/data/output.csv'
-antibiotic_df = pd.read_csv(filepath)
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+prev_model_filepath = BASE_DIR / 'data' / 'output.csv'
+prev_model_df = pd.read_csv(prev_model_filepath)
+
+new_model_filepath = BASE_DIR / 'data' / 'predictions.csv'
+new_model_df = pd.read_csv(new_model_filepath)
+
+
 
 # Setting up data for the piechart
 def process_input():
-  global row
+  global prev_model_row
+  global new_model_row
   global chart_data
   
   # Pulls from bacteria and antibiotic name for dropdown
-  row = antibiotic_df[
-      (antibiotic_df["Bacteria Name"] == bacteria) &
-      (antibiotic_df["Antibiotic Name"] == antibiotic)
+  prev_model_row = prev_model_df[
+      (prev_model_df["Bacteria Name"] == bacteria) &
+      (prev_model_df["Antibiotic Name"] == antibiotic)
   ]
 
-  vulnerability_total = float(row['Total Vulnerability'])
+  new_model_row = new_model_df[
+      (new_model_df["bacterium"] == bacteria) &
+      (new_model_df["antibiotic"] == antibiotic)
+  ]
+
+  vulnerability_total = float(prev_model_row['Total Vulnerability'])
 
   # Go through each factor and create data entries for the chart                            
-  factor_columns = [column for column in antibiotic_df.columns if column.endswith(" factor")]
+  factor_columns = [column for column in prev_model_df.columns if column.endswith(" factor")]
   chart_data = [{ 
-                "value": float(row[factor]) / vulnerability_total,
+                "value": float(prev_model_row[factor]) / vulnerability_total,
                 "name": factor.replace(' factor', '')
                 } 
                 for factor in factor_columns]
@@ -41,16 +56,23 @@ st.title("Virtual Lab")
 
 bacteria = st.selectbox(
     "Choose a Bacteria?",
-    set(antibiotic_df["Bacteria Name"])
+    set(prev_model_df["Bacteria Name"])
 )
 
 antibiotic = st.selectbox("Choose an Antibiotic?", 
-    set(antibiotic_df["Antibiotic Name"])
+    set(prev_model_df["Antibiotic Name"])
 )
 
 process_input()
 
-st.write(bacteria, "is ", float(row['Resistance']), " resistant to ", antibiotic, ".")
+st.write('Previous Model Prediction: ', float(prev_model_row['Resistance']))
+
+if (new_model_row.empty):
+  st.write('No comparative data provided from ATLAS')
+else:
+  st.write('New Model Prediction: ', float(new_model_row['predicted']))
+
+  st.write('Observed (real) Prediction: ', float(new_model_row['observed']))
 
 # pulled code from echartsapache.org which creates the pie chart
 html_code = f"""

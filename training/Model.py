@@ -12,8 +12,17 @@ filepath_Training = BASE_DIR / 'data set' / 'training_data.csv'
 training_data = pd.read_csv(filepath_Training)
 
 # Split into features (X) and target (y)
-X = training_data.drop(columns=['bacterium', 'antibiotic', 'observed_resistance'])
+X = training_data.drop(columns=['bacterium', 'antibiotic', 'observed_resistance', 'n_isolates'])
 y = training_data['observed_resistance']
+
+# Train final model on all data and save
+final_model = GradientBoostingRegressor(
+    n_estimators=200,
+    learning_rate=0.05,
+    max_depth=3,
+    random_state=42
+)
+final_model.fit(X, y)
 
 # --- Leave-One-Out Validation ---
 loo = LeaveOneOut()
@@ -83,3 +92,40 @@ with open('metrics.txt', 'w') as f:
 print()
 print("Saved predictions.csv and metrics.txt")
 
+# --- Predict ALL pairs (grounded + ungrounded) ---
+output_df = pd.read_csv(BASE_DIR / 'website' / 'data' / 'output.csv')
+
+feature_rows = []
+mechanisms = [c.replace('_x', '') for c in output_df.columns if c.endswith('_x')]
+for _, row in output_df.iterrows():
+    features = {}
+    for mechanism in mechanisms:
+        features[mechanism + '_bact'] = row[mechanism + '_x']
+        features[mechanism + '_abx'] = row[mechanism + '_y']
+    feature_rows.append(features)
+
+feature_df = pd.DataFrame(feature_rows)
+
+# Align columns to match what the model was trained on
+for col in X.columns:
+    if col not in feature_df.columns:
+        feature_df[col] = 0
+feature_df = feature_df[X.columns]
+
+all_predictions = final_model.predict(feature_df)
+
+# Merge observed values where they exist
+observed_lookup = dict(zip(
+    zip(results['bacterium'], results['antibiotic']),
+    results['observed']
+))
+
+all_results = pd.DataFrame({
+    'bacterium': output_df['Bacteria Name'],
+    'antibiotic': output_df['Antibiotic Name'],
+    'observed': [observed_lookup.get((b, a), None) for b, a in zip(output_df['Bacteria Name'], output_df['Antibiotic Name'])],
+    'predicted': [round(p, 4) for p in all_predictions]
+})
+
+all_results.to_csv(BASE_DIR / 'website' / 'data' / 'predictions.csv', index=False)
+print(f"Saved predictions.csv: {len(all_results)} total pairs ({all_results['observed'].notna().sum()} with ATLAS data)")

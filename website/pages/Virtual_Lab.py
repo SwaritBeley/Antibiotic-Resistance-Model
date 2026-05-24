@@ -8,37 +8,37 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-prev_model_filepath = BASE_DIR / 'data' / 'output.csv'
-prev_model_df = pd.read_csv(prev_model_filepath)
+formula_model_filepath = BASE_DIR / 'data' / 'output.csv'
+formula_model_df = pd.read_csv(formula_model_filepath)
 
-new_model_filepath = BASE_DIR / 'data' / 'predictions.csv'
-new_model_df = pd.read_csv(new_model_filepath)
+predictive_model_filepath = BASE_DIR / 'data' / 'predictions.csv'
+predictive_model_df = pd.read_csv(predictive_model_filepath)
 
 
 
 # Setting up data for the piechart
 def process_input():
-  global prev_model_row
-  global new_model_row
+  global formula_model_row
+  global predictive_model_row
   global chart_data
   
   # Pulls from bacteria and antibiotic name for dropdown
-  prev_model_row = prev_model_df[
-      (prev_model_df["Bacteria Name"] == bacteria) &
-      (prev_model_df["Antibiotic Name"] == antibiotic)
+  formula_model_row = formula_model_df[
+      (formula_model_df["Bacteria Name"] == bacteria) &
+      (formula_model_df["Antibiotic Name"] == antibiotic)
   ]
 
-  new_model_row = new_model_df[
-      (new_model_df["bacterium"] == bacteria) &
-      (new_model_df["antibiotic"] == antibiotic)
+  predictive_model_row = predictive_model_df[
+      (predictive_model_df["bacterium"] == bacteria) &
+      (predictive_model_df["antibiotic"] == antibiotic)
   ]
 
-  vulnerability_total = float(prev_model_row['Total Vulnerability'])
+  vulnerability_total = float(formula_model_row['Total Vulnerability'])
 
   # Go through each factor and create data entries for the chart                            
-  factor_columns = [column for column in prev_model_df.columns if column.endswith(" factor")]
+  factor_columns = [column for column in formula_model_df.columns if column.endswith(" factor")]
   chart_data = [{ 
-                "value": float(prev_model_row[factor]) / vulnerability_total,
+                "value": float(formula_model_row[factor]) / vulnerability_total,
                 "name": factor.replace(' factor', '')
                 } 
                 for factor in factor_columns]
@@ -56,23 +56,23 @@ st.title("Virtual Lab")
 
 bacteria = st.selectbox(
     "Choose a Bacteria?",
-    set(prev_model_df["Bacteria Name"])
+    set(formula_model_df["Bacteria Name"])
 )
 
 antibiotic = st.selectbox("Choose an Antibiotic?", 
-    set(prev_model_df["Antibiotic Name"])
+    set(formula_model_df["Antibiotic Name"])
 )
 
 process_input()
 
-st.write('Previous Model Prediction: ', float(prev_model_row['Resistance']))
+st.write('Formula-based Prediction: ', float(formula_model_row['Resistance']))
 
-if (new_model_row.empty):
+st.write('Predictive Model Prediction: ', float(predictive_model_row['predicted']))
+
+if pd.isna(predictive_model_row['observed'].values[0]):
   st.write('No comparative data provided from ATLAS')
 else:
-  st.write('New Model Prediction: ', float(new_model_row['predicted']))
-
-  st.write('Observed (real) Prediction: ', float(new_model_row['observed']))
+  st.write('Observed (real) Prediction: ', float(predictive_model_row['observed']))
 
 # pulled code from echartsapache.org which creates the pie chart
 html_code = f"""

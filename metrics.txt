@@ -1,0 +1,8 @@
+Model Performance
+  MAE:  0.1207
+  R²:   0.5360
+
+Baseline (predict the mean)
+  MAE:  0.2058
+
+Improvement over baseline: 41.3%

@@ -173,7 +173,7 @@ General resistance patterns emerged based on mechanism overlap. Certain mechanis
 """)
 
 # --- Image placed OUTSIDE the markdown string ---
-interface = BASE_DIR / "data" / "Images" / "interface.png"
+interface = BASE_DIR / "data" / "Images" / "Interface.png"
 
 st.image(interface, caption="Figure 1: Virtual Lab Interface", use_container_width=True)
 

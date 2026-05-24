@@ -72,7 +72,7 @@ st.write('Predictive Model Prediction: ', float(predictive_model_row['predicted'
 if pd.isna(predictive_model_row['observed'].values[0]):
   st.write('No comparative data provided from ATLAS')
 else:
-  st.write('Observed (real) Prediction: ', float(predictive_model_row['observed']))
+  st.write('Observed (real) Value: ', float(predictive_model_row['observed']))
 
 # pulled code from echartsapache.org which creates the pie chart
 html_code = f"""

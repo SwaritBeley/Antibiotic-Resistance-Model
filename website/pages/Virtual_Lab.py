@@ -53,11 +53,11 @@ st.title("Virtual Lab")
 
 bacteria = st.selectbox(
     "Choose a Bacteria?",
-    set(formula_model_df["Bacteria Name"])
+    sorted(set(formula_model_df["Bacteria Name"]))
 )
 
 antibiotic = st.selectbox("Choose an Antibiotic?", 
-    set(formula_model_df["Antibiotic Name"])
+    sorted(set(formula_model_df["Antibiotic Name"]))
 )
 
 process_input()

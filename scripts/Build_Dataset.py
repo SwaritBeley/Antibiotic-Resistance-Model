@@ -26,15 +26,11 @@ mechanism_factors = {}
 
 # Iterating over each row in the supertable to add resistance values
 for index, row in supertable.iterrows():
-    total_sum = 0
     
     for mechanism in mechanisms:
         # calculating individual mechanism factors
         mechanism_factors[mechanism] = row[mechanism + '_bact'] * row[mechanism + '_abx']
         supertable.at[index, mechanism + " factor"] = mechanism_factors[mechanism]
-
-        # Used for calculating total resistance
-        total_sum += row[mechanism + '_abx']
 
     total_vulnerability = sum(mechanism_factors.values())
 
@@ -42,12 +38,12 @@ for index, row in supertable.iterrows():
     supertable.at[index, 'Total Vulnerability'] = round(total_vulnerability, 1)
     supertable.at[index, 'Resistance'] = round(total_vulnerability / len(mechanisms), 2)
 
-    # Rounding the values
-    supertable['Total Vulnerability'] = supertable['Total Vulnerability'].round(1)
-    supertable['Resistance'] = supertable['Resistance'].round(2)
-
     # Reset values for next iteration
     mechanism_factors.clear()
     
+# Rounding the values
+supertable['Total Vulnerability'] = supertable['Total Vulnerability'].round(1)
+supertable['Resistance'] = supertable['Resistance'].round(2)
+
 # Stores it to supertable.csv for the website to access
-supertable.to_csv(BASE_DIR / 'data set' / 'supertable.csv')
+supertable.to_csv(BASE_DIR / 'data set' / 'supertable.csv', index=False)

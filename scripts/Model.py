@@ -80,10 +80,9 @@ results = pd.DataFrame({
     'observed': actuals,
     'predicted': [round(p, 4) for p in predictions]
 })
-results.to_csv(BASE_DIR / 'website' / 'data' / 'predictions.csv', index=False)
 
 # --- Save metrics to text file ---
-with open('metrics.txt', 'w') as f:
+with open(BASE_DIR / 'metrics.txt', 'w') as f:
     f.write("Model Performance\n")
     f.write(f"  MAE:  {model_mae:.4f}\n")
     f.write(f"  R²:   {model_r2:.4f}\n\n")
@@ -101,7 +100,7 @@ output_df = pd.read_csv(BASE_DIR  / 'data set' / 'supertable.csv')
 # Use the actual mechanism columns from the supertable
 feature_df = output_df.reindex(columns=X.columns, fill_value=0)
 
-all_predictions = final_model.predict(feature_df)
+all_predictions = np.clip(final_model.predict(feature_df), 0, 1)
 
 # Merge observed values where they exist
 observed_lookup = dict(zip(

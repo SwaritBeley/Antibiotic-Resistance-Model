@@ -1,14 +1,19 @@
 import pandas as pd
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 
 # reads tables into dataframes
-filepath_A = '.\data set\Data - Table A.csv'
+filepath_A = BASE_DIR / 'data set' / 'Data - Table A.csv'
 bacteria_df = pd.read_csv(filepath_A)
 bacteria_df = bacteria_df.replace({'Yes': 1, 'No': 0}) # convert to 0/1 for multiplcation process after
-filepath_B = '.\data set\Data - Table B.csv'
+filepath_B = BASE_DIR / 'data set' / 'Data - Table B.csv'
 antibiotic_df = pd.read_csv(filepath_B)
 
-# Pairs bacteria rows with antibiotic rows
-supertable = bacteria_df.merge(antibiotic_df, how='cross')
+# Pairs bacteria rows with antibiotic rows and makes the supertable
+supertable = bacteria_df.merge(antibiotic_df, how='cross', suffixes=('_bact', '_abx'))
 
 # Stores all mechanisms listed in bacteria_df
 mechanisms = bacteria_df.columns[1:]
@@ -25,11 +30,11 @@ for index, row in supertable.iterrows():
     
     for mechanism in mechanisms:
         # calculating individual mechanism factors
-        mechanism_factors[mechanism] = row[mechanism + '_x'] * row[mechanism + '_y']
+        mechanism_factors[mechanism] = row[mechanism + '_bact'] * row[mechanism + '_abx']
         supertable.at[index, mechanism + " factor"] = mechanism_factors[mechanism]
 
         # Used for calculating total resistance
-        total_sum += row[mechanism + '_y']
+        total_sum += row[mechanism + '_abx']
 
     total_vulnerability = sum(mechanism_factors.values())
 
@@ -44,5 +49,5 @@ for index, row in supertable.iterrows():
     # Reset values for next iteration
     mechanism_factors.clear()
     
-# Stores it to output.csv for the website to access
-supertable.to_csv('.\website\data\output.csv')
+# Stores it to supertable.csv for the website to access
+supertable.to_csv(BASE_DIR / 'data set' / 'supertable.csv')

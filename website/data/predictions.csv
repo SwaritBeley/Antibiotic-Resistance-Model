@@ -1,265 +1,85 @@
 bacterium,antibiotic,observed,predicted
-Mycoplasma,Ampicillin,,0.1618
-Mycoplasma,Azithromycin,,0.0589
-Mycoplasma,Imipenem,,-0.0001
-Mycoplasma,Meropenem,,0.041
-Mycoplasma,Meropenem varborbactam,,-0.0042
-Mycoplasma,Cefepime,,-0.0177
-Mycoplasma,Cefiderocol,,-0.0011
-Mycoplasma,Cefixime,,-0.0216
-Mycoplasma,Cefoperazone sulbactam,,-0.0066
-Mycoplasma,Cefoxitin,,-0.026
-Mycoplasma,Cefpodoxime,,-0.0216
-Mycoplasma,Ceftaroline,,-0.0184
-Mycoplasma,Ceftazidime avibactam,,-0.0097
-Mycoplasma,Ceftibuten,,-0.0216
-Mycoplasma,Ceftolozane tazobactam,,-0.0097
-Mycoplasma,Ceftriaxone,,-0.0216
-Mycoplasma,Amikacin,,0.0018
-Mycoplasma,Gentamicin,,0.1072
-Mycoplasma,Erythromycin,,0.0643
-Mycoplasma,Amoxy/clav,,-0.0409
-Mycoplasma,Ampicillin sulbactam,,-0.0409
-Mycoplasma,Oxacillin,,0.0117
-Escherichia coli,Ampicillin,0.6798,0.1859
-Escherichia coli,Azithromycin,,0.0767
-Escherichia coli,Imipenem,0.0172,0.0394
-Escherichia coli,Meropenem,0.0126,0.0483
-Escherichia coli,Meropenem varborbactam,,0.0326
-Escherichia coli,Cefepime,0.188,0.0453
-Escherichia coli,Cefiderocol,0.0057,0.0035
-Escherichia coli,Cefixime,,0.0413
-Escherichia coli,Cefoperazone sulbactam,,0.037
-Escherichia coli,Cefoxitin,,0.0518
-Escherichia coli,Cefpodoxime,,0.0413
-Escherichia coli,Ceftaroline,0.3471,0.0526
-Escherichia coli,Ceftazidime avibactam,,0.0326
-Escherichia coli,Ceftibuten,0.1129,0.0413
-Escherichia coli,Ceftolozane tazobactam,,0.0326
-Escherichia coli,Ceftriaxone,0.2653,0.0413
-Escherichia coli,Amikacin,0.0432,0.0035
-Escherichia coli,Gentamicin,0.1844,0.1367
-Escherichia coli,Erythromycin,,0.0799
-Escherichia coli,Amoxy/clav,,0.0312
-Escherichia coli,Ampicillin sulbactam,,0.0312
-Escherichia coli,Oxacillin,,0.0329
-Pseudomonas aeruginosa,Ampicillin,,0.1859
-Pseudomonas aeruginosa,Azithromycin,,0.0767
-Pseudomonas aeruginosa,Imipenem,0.2652,0.0394
-Pseudomonas aeruginosa,Meropenem,0.2106,0.0483
-Pseudomonas aeruginosa,Meropenem varborbactam,,0.0326
-Pseudomonas aeruginosa,Cefepime,0.1302,0.0453
-Pseudomonas aeruginosa,Cefiderocol,0.0029,0.0035
-Pseudomonas aeruginosa,Cefixime,,0.0413
-Pseudomonas aeruginosa,Cefoperazone sulbactam,,0.037
-Pseudomonas aeruginosa,Cefoxitin,,0.0518
-Pseudomonas aeruginosa,Cefpodoxime,,0.0413
-Pseudomonas aeruginosa,Ceftaroline,,0.0526
-Pseudomonas aeruginosa,Ceftazidime avibactam,,0.0326
-Pseudomonas aeruginosa,Ceftibuten,,0.0413
-Pseudomonas aeruginosa,Ceftolozane tazobactam,,0.0326
-Pseudomonas aeruginosa,Ceftriaxone,,0.0413
-Pseudomonas aeruginosa,Amikacin,0.0756,0.0035
-Pseudomonas aeruginosa,Gentamicin,,0.1367
-Pseudomonas aeruginosa,Erythromycin,,0.0799
-Pseudomonas aeruginosa,Amoxy/clav,,0.0312
-Pseudomonas aeruginosa,Ampicillin sulbactam,,0.0312
-Pseudomonas aeruginosa,Oxacillin,,0.0329
-Klebsiella pneumoniae,Ampicillin,0.9219,0.1859
-Klebsiella pneumoniae,Azithromycin,,0.0767
-Klebsiella pneumoniae,Imipenem,0.1487,0.0394
-Klebsiella pneumoniae,Meropenem,0.1283,0.0483
-Klebsiella pneumoniae,Meropenem varborbactam,,0.0326
-Klebsiella pneumoniae,Cefepime,0.3335,0.0453
-Klebsiella pneumoniae,Cefiderocol,0.0023,0.0035
-Klebsiella pneumoniae,Cefixime,,0.0413
-Klebsiella pneumoniae,Cefoperazone sulbactam,,0.037
-Klebsiella pneumoniae,Cefoxitin,,0.0518
-Klebsiella pneumoniae,Cefpodoxime,,0.0413
-Klebsiella pneumoniae,Ceftaroline,0.4826,0.0526
-Klebsiella pneumoniae,Ceftazidime avibactam,,0.0326
-Klebsiella pneumoniae,Ceftibuten,0.2363,0.0413
-Klebsiella pneumoniae,Ceftolozane tazobactam,,0.0326
-Klebsiella pneumoniae,Ceftriaxone,0.3836,0.0413
-Klebsiella pneumoniae,Amikacin,0.1189,0.0035
-Klebsiella pneumoniae,Gentamicin,0.2993,0.1367
-Klebsiella pneumoniae,Erythromycin,,0.0799
-Klebsiella pneumoniae,Amoxy/clav,,0.0312
-Klebsiella pneumoniae,Ampicillin sulbactam,,0.0312
-Klebsiella pneumoniae,Oxacillin,,0.0329
-Streptococcus pneumoniae,Ampicillin,,0.196
-Streptococcus pneumoniae,Azithromycin,0.2941,0.0823
-Streptococcus pneumoniae,Imipenem,0.0273,0.0201
-Streptococcus pneumoniae,Meropenem,0.1093,0.0849
-Streptococcus pneumoniae,Meropenem varborbactam,,0.012
-Streptococcus pneumoniae,Cefepime,,0.0056
-Streptococcus pneumoniae,Cefiderocol,,0.0147
-Streptococcus pneumoniae,Cefixime,,0.0016
-Streptococcus pneumoniae,Cefoperazone sulbactam,,0.0069
-Streptococcus pneumoniae,Cefoxitin,,-0.0126
-Streptococcus pneumoniae,Cefpodoxime,,0.0016
-Streptococcus pneumoniae,Ceftaroline,0.0,-0.0162
-Streptococcus pneumoniae,Ceftazidime avibactam,,0.0065
-Streptococcus pneumoniae,Ceftibuten,,0.0016
-Streptococcus pneumoniae,Ceftolozane tazobactam,,0.0065
-Streptococcus pneumoniae,Ceftriaxone,0.02,0.0016
-Streptococcus pneumoniae,Amikacin,,0.0207
-Streptococcus pneumoniae,Gentamicin,,0.1277
-Streptococcus pneumoniae,Erythromycin,0.3265,0.0876
-Streptococcus pneumoniae,Amoxy/clav,,-0.0365
-Streptococcus pneumoniae,Ampicillin sulbactam,,-0.0365
-Streptococcus pneumoniae,Oxacillin,,0.042
-Salmonella enterica,Ampicillin,,0.1859
-Salmonella enterica,Azithromycin,,0.0767
-Salmonella enterica,Imipenem,,0.0394
-Salmonella enterica,Meropenem,,0.0483
-Salmonella enterica,Meropenem varborbactam,,0.0326
-Salmonella enterica,Cefepime,,0.0453
-Salmonella enterica,Cefiderocol,,0.0035
-Salmonella enterica,Cefixime,,0.0413
-Salmonella enterica,Cefoperazone sulbactam,,0.037
-Salmonella enterica,Cefoxitin,,0.0518
-Salmonella enterica,Cefpodoxime,,0.0413
-Salmonella enterica,Ceftaroline,,0.0526
-Salmonella enterica,Ceftazidime avibactam,,0.0326
-Salmonella enterica,Ceftibuten,,0.0413
-Salmonella enterica,Ceftolozane tazobactam,,0.0326
-Salmonella enterica,Ceftriaxone,,0.0413
-Salmonella enterica,Amikacin,,0.0035
-Salmonella enterica,Gentamicin,,0.1367
-Salmonella enterica,Erythromycin,,0.0799
-Salmonella enterica,Amoxy/clav,,0.0312
-Salmonella enterica,Ampicillin sulbactam,,0.0312
-Salmonella enterica,Oxacillin,,0.0329
-Acinetobacter baumannii,Ampicillin,,0.1859
-Acinetobacter baumannii,Azithromycin,,0.0767
-Acinetobacter baumannii,Imipenem,0.6669,0.0394
-Acinetobacter baumannii,Meropenem,0.636,0.0483
-Acinetobacter baumannii,Meropenem varborbactam,,0.0326
-Acinetobacter baumannii,Cefepime,0.6038,0.0453
-Acinetobacter baumannii,Cefiderocol,0.0482,0.0035
-Acinetobacter baumannii,Cefixime,,0.0413
-Acinetobacter baumannii,Cefoperazone sulbactam,,0.037
-Acinetobacter baumannii,Cefoxitin,,0.0518
-Acinetobacter baumannii,Cefpodoxime,,0.0413
-Acinetobacter baumannii,Ceftaroline,,0.0526
-Acinetobacter baumannii,Ceftazidime avibactam,,0.0326
-Acinetobacter baumannii,Ceftibuten,,0.0413
-Acinetobacter baumannii,Ceftolozane tazobactam,,0.0326
-Acinetobacter baumannii,Ceftriaxone,,0.0413
-Acinetobacter baumannii,Amikacin,0.5576,0.0035
-Acinetobacter baumannii,Gentamicin,0.6654,0.1367
-Acinetobacter baumannii,Erythromycin,,0.0799
-Acinetobacter baumannii,Amoxy/clav,,0.0312
-Acinetobacter baumannii,Ampicillin sulbactam,,0.0312
-Acinetobacter baumannii,Oxacillin,,0.0329
-Neisseria gonorrhoeae,Ampicillin,,0.1028
-Neisseria gonorrhoeae,Azithromycin,,0.0318
-Neisseria gonorrhoeae,Imipenem,,-0.0326
-Neisseria gonorrhoeae,Meropenem,,-0.0196
-Neisseria gonorrhoeae,Meropenem varborbactam,,-0.0267
-Neisseria gonorrhoeae,Cefepime,,-0.0492
-Neisseria gonorrhoeae,Cefiderocol,,-0.037
-Neisseria gonorrhoeae,Cefixime,0.0,-0.0532
-Neisseria gonorrhoeae,Cefoperazone sulbactam,,-0.0233
-Neisseria gonorrhoeae,Cefoxitin,,-0.0427
-Neisseria gonorrhoeae,Cefpodoxime,,-0.0532
-Neisseria gonorrhoeae,Ceftaroline,,-0.0214
-Neisseria gonorrhoeae,Ceftazidime avibactam,,-0.0284
-Neisseria gonorrhoeae,Ceftibuten,,-0.0532
-Neisseria gonorrhoeae,Ceftolozane tazobactam,,-0.0284
-Neisseria gonorrhoeae,Ceftriaxone,0.0,-0.0532
-Neisseria gonorrhoeae,Amikacin,,-0.037
-Neisseria gonorrhoeae,Gentamicin,,0.0812
-Neisseria gonorrhoeae,Erythromycin,,0.0372
-Neisseria gonorrhoeae,Amoxy/clav,,-0.0469
-Neisseria gonorrhoeae,Ampicillin sulbactam,,-0.0469
-Neisseria gonorrhoeae,Oxacillin,,-0.0443
-Enterococcus faecium,Ampicillin,0.8566,0.2545
-Enterococcus faecium,Azithromycin,,0.1042
-Enterococcus faecium,Imipenem,,0.0647
-Enterococcus faecium,Meropenem,,0.1239
-Enterococcus faecium,Meropenem varborbactam,,0.0509
-Enterococcus faecium,Cefepime,,0.0502
-Enterococcus faecium,Cefiderocol,,0.0515
-Enterococcus faecium,Cefixime,,0.0462
-Enterococcus faecium,Cefoperazone sulbactam,,0.0514
-Enterococcus faecium,Cefoxitin,,0.032
-Enterococcus faecium,Cefpodoxime,,0.0462
-Enterococcus faecium,Ceftaroline,,0.0223
-Enterococcus faecium,Ceftazidime avibactam,,0.0454
-Enterococcus faecium,Ceftibuten,,0.0462
-Enterococcus faecium,Ceftolozane tazobactam,,0.0454
-Enterococcus faecium,Ceftriaxone,,0.0462
-Enterococcus faecium,Amikacin,,0.0592
-Enterococcus faecium,Gentamicin,,0.1491
-Enterococcus faecium,Erythromycin,,0.1096
-Enterococcus faecium,Amoxy/clav,,0.0077
-Enterococcus faecium,Ampicillin sulbactam,,0.0077
-Enterococcus faecium,Oxacillin,,0.0862
-Enterobacter cloacae,Ampicillin,0.8823,0.1859
-Enterobacter cloacae,Azithromycin,,0.0767
-Enterobacter cloacae,Imipenem,0.0412,0.0394
-Enterobacter cloacae,Meropenem,0.0268,0.0483
-Enterobacter cloacae,Meropenem varborbactam,,0.0326
-Enterobacter cloacae,Cefepime,0.1292,0.0453
-Enterobacter cloacae,Cefiderocol,0.0165,0.0035
-Enterobacter cloacae,Cefixime,,0.0413
-Enterobacter cloacae,Cefoperazone sulbactam,,0.037
-Enterobacter cloacae,Cefoxitin,,0.0518
-Enterobacter cloacae,Cefpodoxime,,0.0413
-Enterobacter cloacae,Ceftaroline,0.3963,0.0526
-Enterobacter cloacae,Ceftazidime avibactam,,0.0326
-Enterobacter cloacae,Ceftibuten,0.2626,0.0413
-Enterobacter cloacae,Ceftolozane tazobactam,,0.0326
-Enterobacter cloacae,Ceftriaxone,0.3978,0.0413
-Enterobacter cloacae,Amikacin,0.0465,0.0035
-Enterobacter cloacae,Gentamicin,0.1489,0.1367
-Enterobacter cloacae,Erythromycin,,0.0799
-Enterobacter cloacae,Amoxy/clav,,0.0312
-Enterobacter cloacae,Ampicillin sulbactam,,0.0312
-Enterobacter cloacae,Oxacillin,,0.0329
-Serratia marcescens,Ampicillin,0.8463,0.0987
-Serratia marcescens,Azithromycin,,0.0324
-Serratia marcescens,Imipenem,0.0424,-0.0317
-Serratia marcescens,Meropenem,0.0225,-0.0187
-Serratia marcescens,Meropenem varborbactam,,-0.0258
-Serratia marcescens,Cefepime,0.0599,-0.0483
-Serratia marcescens,Cefiderocol,0.0,-0.017
-Serratia marcescens,Cefixime,,-0.0523
-Serratia marcescens,Cefoperazone sulbactam,,-0.0224
-Serratia marcescens,Cefoxitin,,-0.0418
-Serratia marcescens,Cefpodoxime,,-0.0523
-Serratia marcescens,Ceftaroline,0.2599,-0.0195
-Serratia marcescens,Ceftazidime avibactam,,-0.0275
-Serratia marcescens,Ceftibuten,0.0556,-0.0523
-Serratia marcescens,Ceftolozane tazobactam,,-0.0275
-Serratia marcescens,Ceftriaxone,0.1628,-0.0523
-Serratia marcescens,Amikacin,0.0551,-0.017
-Serratia marcescens,Gentamicin,0.0673,0.0711
-Serratia marcescens,Erythromycin,,0.0378
-Serratia marcescens,Amoxy/clav,,-0.045
-Serratia marcescens,Ampicillin sulbactam,,-0.045
-Serratia marcescens,Oxacillin,,-0.0328
-Mycobacterium tuberculosis,Ampicillin,,0.1116
-Mycobacterium tuberculosis,Azithromycin,,0.0346
-Mycobacterium tuberculosis,Imipenem,,-0.0303
-Mycobacterium tuberculosis,Meropenem,,-0.0041
-Mycobacterium tuberculosis,Meropenem varborbactam,,-0.0205
-Mycobacterium tuberculosis,Cefepime,,-0.0469
-Mycobacterium tuberculosis,Cefiderocol,,-0.0356
-Mycobacterium tuberculosis,Cefixime,,-0.0509
-Mycobacterium tuberculosis,Cefoperazone sulbactam,,-0.0238
-Mycobacterium tuberculosis,Cefoxitin,,-0.0433
-Mycobacterium tuberculosis,Cefpodoxime,,-0.0509
-Mycobacterium tuberculosis,Ceftaroline,,-0.0229
-Mycobacterium tuberculosis,Ceftazidime avibactam,,-0.0222
-Mycobacterium tuberculosis,Ceftibuten,,-0.0509
-Mycobacterium tuberculosis,Ceftolozane tazobactam,,-0.0222
-Mycobacterium tuberculosis,Ceftriaxone,,-0.0509
-Mycobacterium tuberculosis,Amikacin,,-0.0356
-Mycobacterium tuberculosis,Gentamicin,,0.0846
-Mycobacterium tuberculosis,Erythromycin,,0.04
-Mycobacterium tuberculosis,Amoxy/clav,,-0.0496
-Mycobacterium tuberculosis,Ampicillin sulbactam,,-0.0496
-Mycobacterium tuberculosis,Oxacillin,,-0.0377
+Acinetobacter baumannii,Amikacin,0.5576,0.1077
+Acinetobacter baumannii,Ampicillin-sulbactam,0.5312,0.5293
+Acinetobacter baumannii,Cefepime,0.6038,0.1786
+Acinetobacter baumannii,Cefiderocol,0.0482,0.0273
+Acinetobacter baumannii,Gentamicin,0.6654,0.3737
+Acinetobacter baumannii,Imipenem,0.6669,0.2692
+Acinetobacter baumannii,Meropenem,0.636,0.2462
+Escherichia coli,Amikacin,0.0432,0.1099
+Escherichia coli,Amoxicillin-clavulanate,0.1194,0.1658
+Escherichia coli,Ampicillin,0.6798,0.8852
+Escherichia coli,Ampicillin-sulbactam,0.2085,0.0913
+Escherichia coli,Cefepime,0.188,0.1626
+Escherichia coli,Cefiderocol,0.0057,-0.0144
+Escherichia coli,Ceftaroline,0.3471,0.2331
+Escherichia coli,Ceftazidime-avibactam,0.0135,0.0601
+Escherichia coli,Ceftibuten,0.1129,0.2444
+Escherichia coli,Ceftolozane-tazobactam,0.05,0.0422
+Escherichia coli,Ceftriaxone,0.2653,0.1579
+Escherichia coli,Gentamicin,0.1844,0.1869
+Escherichia coli,Imipenem,0.0172,0.0727
+Escherichia coli,Meropenem,0.0126,0.0619
+Escherichia coli,Meropenem-vaborbactam,0.0207,0.0404
+Enterobacter cloacae,Amikacin,0.0465,0.1208
+Enterobacter cloacae,Amoxicillin-clavulanate,0.9308,0.4689
+Enterobacter cloacae,Ampicillin,0.8823,0.8794
+Enterobacter cloacae,Ampicillin-sulbactam,0.5433,0.5653
+Enterobacter cloacae,Cefepime,0.1292,0.3025
+Enterobacter cloacae,Cefiderocol,0.0165,0.0124
+Enterobacter cloacae,Ceftaroline,0.3963,0.4572
+Enterobacter cloacae,Ceftazidime-avibactam,0.0322,0.1191
+Enterobacter cloacae,Ceftibuten,0.2626,0.3306
+Enterobacter cloacae,Ceftolozane-tazobactam,0.1826,0.0905
+Enterobacter cloacae,Ceftriaxone,0.3978,0.2903
+Enterobacter cloacae,Gentamicin,0.1489,0.281
+Enterobacter cloacae,Imipenem,0.0412,0.1419
+Enterobacter cloacae,Meropenem,0.0268,0.1196
+Enterobacter cloacae,Meropenem-vaborbactam,0.0221,0.0787
+Enterococcus faecium,Ampicillin,0.8566,0.6022
+Klebsiella pneumoniae,Amikacin,0.1189,0.0886
+Klebsiella pneumoniae,Amoxicillin-clavulanate,0.2507,0.6509
+Klebsiella pneumoniae,Ampicillin,0.9219,0.8557
+Klebsiella pneumoniae,Ampicillin-sulbactam,0.4315,0.6004
+Klebsiella pneumoniae,Cefepime,0.3335,0.2129
+Klebsiella pneumoniae,Cefiderocol,0.0023,0.0067
+Klebsiella pneumoniae,Ceftaroline,0.4826,0.415
+Klebsiella pneumoniae,Ceftazidime-avibactam,0.0586,0.1109
+Klebsiella pneumoniae,Ceftibuten,0.2363,0.3408
+Klebsiella pneumoniae,Ceftolozane-tazobactam,0.2446,0.0747
+Klebsiella pneumoniae,Ceftriaxone,0.3836,0.2971
+Klebsiella pneumoniae,Gentamicin,0.2993,0.1577
+Klebsiella pneumoniae,Imipenem,0.1487,0.1023
+Klebsiella pneumoniae,Meropenem,0.1283,0.0873
+Klebsiella pneumoniae,Meropenem-vaborbactam,0.1209,0.0351
+Neisseria gonorrhoeae,Cefixime,0.0,0.0122
+Neisseria gonorrhoeae,Ceftriaxone,0.0,0.0122
+Pseudomonas aeruginosa,Amikacin,0.0756,0.5317
+Pseudomonas aeruginosa,Cefepime,0.1302,0.5471
+Pseudomonas aeruginosa,Cefiderocol,0.0029,0.0573
+Pseudomonas aeruginosa,Ceftazidime-avibactam,0.0936,0.1325
+Pseudomonas aeruginosa,Ceftolozane-tazobactam,0.0869,0.1265
+Pseudomonas aeruginosa,Imipenem,0.2652,0.5789
+Pseudomonas aeruginosa,Meropenem,0.2106,0.5618
+Serratia marcescens,Amikacin,0.0551,0.0179
+Serratia marcescens,Amoxicillin-clavulanate,0.914,0.4455
+Serratia marcescens,Ampicillin,0.8463,0.9472
+Serratia marcescens,Ampicillin-sulbactam,0.4623,0.7398
+Serratia marcescens,Cefepime,0.0599,0.1356
+Serratia marcescens,Cefiderocol,0.0,-0.002
+Serratia marcescens,Ceftaroline,0.2599,0.2549
+Serratia marcescens,Ceftazidime-avibactam,0.0158,0.0722
+Serratia marcescens,Ceftibuten,0.0556,0.1617
+Serratia marcescens,Ceftolozane-tazobactam,0.0552,0.0376
+Serratia marcescens,Ceftriaxone,0.1628,0.0855
+Serratia marcescens,Gentamicin,0.0673,0.1283
+Serratia marcescens,Imipenem,0.0424,0.0706
+Serratia marcescens,Meropenem,0.0225,0.1254
+Serratia marcescens,Meropenem-vaborbactam,0.0139,0.0293
+Streptococcus pneumoniae,Amoxicillin-clavulanate,0.041,0.2154
+Streptococcus pneumoniae,Azithromycin,0.2941,0.4072
+Streptococcus pneumoniae,Ceftaroline,0.0,0.1125
+Streptococcus pneumoniae,Ceftriaxone,0.02,0.0364
+Streptococcus pneumoniae,Erythromycin,0.3265,0.2423
+Streptococcus pneumoniae,Imipenem,0.0273,0.0396
+Streptococcus pneumoniae,Meropenem,0.1093,-0.0244

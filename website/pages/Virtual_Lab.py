@@ -1,4 +1,3 @@
-# streamlit run .\website\Home.py
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -6,15 +5,13 @@ import pandas as pd
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-formula_model_filepath = BASE_DIR / 'data' / 'output.csv'
+formula_model_filepath = BASE_DIR / 'data set' / 'supertable.csv'
 formula_model_df = pd.read_csv(formula_model_filepath)
 
-predictive_model_filepath = BASE_DIR / 'data' / 'predictions.csv'
+predictive_model_filepath = BASE_DIR / 'data set' / 'predictions.csv'
 predictive_model_df = pd.read_csv(predictive_model_filepath)
-
-
 
 # Setting up data for the piechart
 def process_input():

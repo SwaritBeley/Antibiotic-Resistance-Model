@@ -1,0 +1,13 @@
+Bacteria Name,has multidrug efflux pump,performs hydrolysis,porin loss,porin mutation,PBP modification,ribosomal methylation,biofilm protection,target alteration,target replacement,target overexpression,inactivation,gram_negative,outer_membrane,intrinsic_beta_lactamase,non_fermenter
+Mycoplasma pneumoniae,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No
+Escherichia coli,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No
+Pseudomonas aeruginosa,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes
+Klebsiella pneumoniae,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No
+Streptococcus pneumoniae,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
+Salmonella enterica,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No
+Acinetobacter baumannii,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes
+Neisseria gonorrhoeae,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes
+Enterococcus faecium,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No
+Enterobacter cloacae,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No
+Serratia marcescens,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No
+Mycobacterium tuberculosis,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes

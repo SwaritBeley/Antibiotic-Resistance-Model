@@ -95,3 +95,7 @@ metrics.txt                     MAE, R², baseline comparison
 - scikit-learn: https://scikit-learn.org
 - Streamlit: https://streamlit.io
 - Mechanism research: https://pmc.ncbi.nlm.nih.gov/articles/PMC6604941/
+
+## License
+
+This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.

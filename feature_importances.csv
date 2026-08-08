@@ -1,0 +1,31 @@
+feature,importance
+gram_negative_abx,0.24794225022991612
+outer_membrane_abx,0.1605357969413646
+intrinsic_beta_lactamase_bact,0.11938375940291839
+non_fermenter_bact,0.06279634501646507
+biofilm protection_abx,0.0626499796687916
+non_fermenter_abx,0.05996190315294018
+intrinsic_beta_lactamase_abx,0.050893782467877034
+porin loss_bact,0.043900560686726244
+inactivation_abx,0.04292685593484271
+performs hydrolysis_abx,0.03473397680300015
+porin mutation_abx,0.021164576597114234
+PBP modification_abx,0.01882259181755067
+porin loss_abx,0.01412130878177841
+target replacement_abx,0.013801488903160594
+has multidrug efflux pump_abx,0.013291924951845443
+target overexpression_abx,0.009582070508605907
+target alteration_abx,0.005732629848187082
+porin mutation_bact,0.003756380402986346
+target replacement_bact,0.0024583435641588043
+PBP modification_bact,0.0023274214131040164
+ribosomal methylation_abx,0.0018256524466101788
+gram_negative_bact,0.0015905627295365588
+target overexpression_bact,0.0015598627022332845
+has multidrug efflux pump_bact,0.0012536402455461844
+outer_membrane_bact,0.0011180874065282865
+ribosomal methylation_bact,0.0008026193258576336
+inactivation_bact,0.0005714448952398751
+performs hydrolysis_bact,0.0004941831551143972
+target alteration_bact,0.0
+biofilm protection_bact,0.0

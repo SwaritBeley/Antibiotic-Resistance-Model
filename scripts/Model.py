@@ -25,6 +25,13 @@ final_model = GradientBoostingRegressor(
 
 
 final_model.fit(X, y)
+importances = pd.DataFrame({
+    'feature': X.columns,
+    'importance': final_model.feature_importances_
+}).sort_values('importance', ascending=False)
+
+importances.to_csv(BASE_DIR / 'feature_importances.csv', index=False)
+print(importances)
 
 # --- Leave-One-Out Validation ---
 loo = LeaveOneOut()
